@@ -1,0 +1,28 @@
+{
+    "name": "mocha-snippets",
+    "displayName": "mocha-snippets",
+    "description": "Snippets for mocha",
+    "version": "0.0.1",
+    "publisher": "jameshrisho",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "contributes": {
+       "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "vscode": "^0.11.0"
+    }
+    
+}

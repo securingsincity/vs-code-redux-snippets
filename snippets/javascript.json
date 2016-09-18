@@ -1,0 +1,59 @@
+{
+    "Describe Block": {
+        "prefix": "desc",
+        "body": [
+            "describe('${title}', () => {",
+            "\t${body}",
+            "});"
+        ]
+    },
+    "It Block": {
+        "prefix": "it",
+        "body": [
+            "it('${title}', () => {",
+            "\t${body}",
+            "});"
+        ]
+    },
+    "It async Block": {
+        "prefix": "ita",
+        "body": [
+            "it('${title}', (done) => {",
+            "\t${body}",
+            "done();",
+            "});"
+        ]
+    },
+    "Before Block": {
+        "prefix": "before",
+        "body": [
+            "before(() => {",
+            "\t${body}",
+            "});" 
+        ]
+    },
+    "Before Each Block": {
+        "prefix": "beforeEach",
+        "body": [
+            "beforeEach(() => {",
+            "\t${body}",
+            "});" 
+        ]
+    },
+    "After Each Block": {
+        "prefix": "afterEach",
+        "body": [
+            "afterEach(() => {",
+            "\t${body}",
+            "});" 
+        ]
+    },
+    "After Block": {
+        "prefix": "after",
+        "body": [
+            "after(() => {",
+            "\t${body}",
+            "});" 
+        ]
+    }
+}
