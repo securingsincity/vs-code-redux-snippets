@@ -1,59 +1,79 @@
 {
-    "Describe Block": {
-        "prefix": "desc",
+    "reducer": {
+        "prefix": "reducer", 
         "body": [
-            "describe('${title}', () => {",
-            "\t${body}",
-            "});"
+            "function ${name}(state = initialState, action) {",
+            "\tswitch (action.type) {",
+            "\t\tcase ${ACTION_NAME}:",
+            "\t\t\treturn Object.assign({}, state, {",
+            "\t\t\t\tvisibilityFilter: action.filter",
+            "\t\t\t})",
+            "\t\tdefault:",
+            "\t\t\treturn state",
+            "\t}",
+            "}"
+        ]
+    }
+    "container": {
+        "prefix": "container",
+        "body": [
+            "import { connect } from 'react-redux'",
+            "import ${component} from '${path}'",
+            "",
+            "const mapStateToProps = (state, ownProps) => {",
+            "\treturn {",
+            "\t\t${propName}: ${prop}",
+            "\t}",
+            "}",
+            "",
+            "const mapDispatchToProps = (state, ownProps) => {",
+            "\treturn {",
+            "\t\t${propName}: () => {",
+            "\t\t\tdispatch(${value}(ownProps))",
+            "\t\t}",
+            "\t}",
+            "}",
+            "const ${containerName} = connect(",
+            "\t${mapStateToProps,}",
+            "\t${mapDispatchToProps}",
+            ")(${component})",
+            "",
+            "export default ${containerName}"
+        ],
+        "description" : "Redux container"
+    },
+    "mapStateToProps": {
+        "prefix": "mstp",
+        "body": [
+            "const mapStateToProps = (state, ownProps) => {",
+            "\treturn {",
+            "\t\t${propName}: ${prop}",
+            "\t}",
+            "}"
         ]
     },
-    "It Block": {
-        "prefix": "it",
+    "mapDispatchToProps": {
+        "prefix": "mdtp",
         "body": [
-            "it('${title}', () => {",
-            "\t${body}",
-            "});"
+            "const mapDispatchToProps = (state, ownProps) => {",
+            "\treturn {",
+            "\t\t${propName}: () => {",
+            "\t\t\tdispatch(${value}(ownProps))",
+            "\t\t}",
+            "\t}",
+            "}"
         ]
     },
-    "It async Block": {
-        "prefix": "ita",
+    
+    "connect": {
+        "prefix": "connect",
         "body": [
-            "it('${title}', (done) => {",
-            "\t${body}",
-            "done();",
-            "});"
-        ]
-    },
-    "Before Block": {
-        "prefix": "before",
-        "body": [
-            "before(() => {",
-            "\t${body}",
-            "});" 
-        ]
-    },
-    "Before Each Block": {
-        "prefix": "beforeEach",
-        "body": [
-            "beforeEach(() => {",
-            "\t${body}",
-            "});" 
-        ]
-    },
-    "After Each Block": {
-        "prefix": "afterEach",
-        "body": [
-            "afterEach(() => {",
-            "\t${body}",
-            "});" 
-        ]
-    },
-    "After Block": {
-        "prefix": "after",
-        "body": [
-            "after(() => {",
-            "\t${body}",
-            "});" 
+            "const ${containerName} = connect(",
+            "\t${mapStateToProps,}",
+            "\t${mapDispatchToProps}",
+            ")(${component})",
+            "",
+            "export default ${containerName}"
         ]
     }
 }

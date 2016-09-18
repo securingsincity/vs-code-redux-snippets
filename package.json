@@ -1,19 +1,57 @@
 {
-    "name": "mocha-snippets",
-    "displayName": "mocha-snippets",
-    "description": "Snippets for mocha",
+    "name": "redux-snippets",
+    "displayName": "redux-snippets",
+    "description": "Snippets for react redux components",
     "version": "0.0.1",
     "publisher": "jameshrisho",
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
-        "Other"
+        "Snippets"
     ],
+    "keywords": [
+        "redux",
+        "es6",
+        "react"
+    ],
+    "galleryBanner": {
+        "color": "#486a8d",
+        "theme": "dark"
+    },
+    "icon": "images/mocha.png",
+    "author": "James Hrisho",
+    "bugs": {
+        "url": "https://github.com/securingsincity/vs-code-redux-snippets/issues"
+    },
+    "homepage": "https://github.com/securingsincity/vs-code-redux-snippets",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/securingsincity/vs-code-redux-snippets.git"
+    },
     "contributes": {
-       "snippets": [
+        "badges": [
+            {
+                "url": "https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67",
+                "href": "http://redux.js.org/",
+                "description": "Redux's Homepage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/javascript.json"
+            },
             {
                 "language": "javascript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "javascriptreact",
                 "path": "./snippets/javascript.json"
             }
         ]
@@ -24,5 +62,4 @@
     "devDependencies": {
         "vscode": "^0.11.0"
     }
-    
 }
