@@ -19,7 +19,7 @@
         "color": "#486a8d",
         "theme": "dark"
     },
-    "icon": "images/mocha.png",
+    "icon": "images/redux.png",
     "author": "James Hrisho",
     "bugs": {
         "url": "https://github.com/securingsincity/vs-code-redux-snippets/issues"
