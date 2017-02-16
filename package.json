@@ -2,7 +2,7 @@
     "name": "redux-snippets",
     "displayName": "redux-snippets",
     "description": "Snippets for react redux components",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "jameshrisho",
     "engines": {
         "vscode": "^1.5.0"

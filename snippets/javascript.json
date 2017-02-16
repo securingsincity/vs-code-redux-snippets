@@ -1,6 +1,6 @@
 {
     "reducer": {
-        "prefix": "reducer", 
+        "prefix": "reducer",
         "body": [
             "function ${name}(state = initialState, action) {",
             "\tswitch (action.type) {",
@@ -26,7 +26,7 @@
             "\t}",
             "}",
             "",
-            "const mapDispatchToProps = (state, ownProps) => {",
+            "const mapDispatchToProps = (dispatch) => {",
             "\treturn {",
             "\t\t${propName}: () => {",
             "\t\t\tdispatch(${value}(ownProps))",
@@ -55,16 +55,16 @@
     "mapDispatchToProps": {
         "prefix": "mdtp",
         "body": [
-            "const mapDispatchToProps = (state, ownProps) => {",
+            "const mapDispatchToProps = (dispatch, ownProps) => {",
             "\treturn {",
             "\t\t${propName}: () => {",
-            "\t\t\tdispatch(${value}(ownProps))",
+            "\t\t\tdispatch(${value}())",
             "\t\t}",
             "\t}",
             "}"
         ]
     },
-    
+
     "connect": {
         "prefix": "connect",
         "body": [
